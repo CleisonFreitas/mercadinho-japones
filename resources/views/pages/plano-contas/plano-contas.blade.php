@@ -34,7 +34,7 @@
 @stop
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid mb-3">
     <div class="card card-invisible" id="content-card">
         <div class="card-header">
             <h4>Plano de Contas</h4>
@@ -56,8 +56,6 @@
                             id="tipo"
                             class="custom-select"
                             >
-                                <option value="ativo">Ativo</option>
-                                <option value="passivo">Passivo</option>
                                 <option value="receitas">Receita</option>
                                 <option value="despesa">Despesa</option>
                         </select>

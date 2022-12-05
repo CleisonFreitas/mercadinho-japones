@@ -3,27 +3,112 @@
 @section('title', 'Clientes')
 
 @section('content_header')
+<div class="container-fluid text-navy">
     <h1>Dashboard</h1>
+</div>
+
 @stop
 
 @section('content')
     <section class="content_dashboard container-fluid">
         <div class="card">
-            <div class="card-header">
-                <div class="row form-group card-search">
-                    <div class="col-12 col-sm-6 col-lg-6 my-1">
-                        <h4>Lista de Clientes</h4>
+            <div class="card-header text-purple">
+                <h3>Resultados</h3>
+            </div>
+            <div class="card-body shadow">
+                <div class="form-group row">
+
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered">
+                                <thead class="bg-gradient-primary">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Despesas</th>
+                                        <th>Progresso</th>
+                                        <th>%</th>
+                                    </tr>
+                                    <tbody class="text-navy">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>À Pagar</td>
+                                            <td>
+                                                <input
+                                                    type="range"
+                                                    class="form-control-range "
+                                                    value="30"
+                                                    min="0"
+                                                    max="100"
+                                                    disabled
+                                                />
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-purple">
+                                                    30%
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Pago</td>
+                                            <td>
+                                                <input
+                                                    type="range"
+                                                    class="form-control-range "
+                                                    value="40"
+                                                    min="0"
+                                                    max="100"
+                                                    disabled
+                                                />
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-navy">
+                                                    40%
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Em Atraso</td>
+                                            <td>
+                                                <input
+                                                    type="range"
+                                                    class="form-control-range "
+                                                    value="30"
+                                                    min="0"
+                                                    max="100"
+                                                    disabled
+                                                />
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-danger">
+                                                    30%
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </thead>
+                            </table>
+                        </div>
                     </div>
-                    <div class="col-12 col-sm-3 col-lg-3">
-                        <input type="text" name="pesquisar" id="" class="form-control" placeholder="Pesquise aqui...">
+
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-12 col-md-12 col-lg-12">
+                                        <canvas id="myChart" style="position: relative; height:40vh; width:80vw"></canvas>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="card-body">
-
-            </div>
-            <div class="card-footer">
-
             </div>
         </div>
     </section>
@@ -31,9 +116,11 @@
 
 @section('css')
     <link rel="stylesheet" href={{ asset('css/home.css') }}>
+    <link rel="stylesheet" href={{ asset('css/style.css') }}>
 
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src={{ asset('js/util/chart.js') }}></script>
 @stop

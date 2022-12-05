@@ -84,7 +84,7 @@ return [
     */
 
     'auth_logo' => [
-        'enabled' => false,
+        'enabled' => true,
         'img' => [
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'Auth Logo',
@@ -130,8 +130,8 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
+    'usermenu_header' => true,
+    'usermenu_header_class' => 'text-info',
     'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
@@ -150,8 +150,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -167,10 +167,10 @@ return [
     |
     */
 
-    'classes_auth_card' => 'bg-gradient-dark',
+    'classes_auth_card' => 'bg-purple text-light',
     'classes_auth_header' => '',
-    'classes_auth_body' => 'bg-gradient-dark',
-    'classes_auth_footer' => 'text-center',
+    'classes_auth_body' => 'bg-purple text-white',
+    'classes_auth_footer' => 'text-center navbar-light',
     'classes_auth_icon' => 'fa-fw text-light',
     'classes_auth_btn' => 'btn-flat btn-light',
 
@@ -192,10 +192,10 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-light-navy elevation-4',
+    'classes_sidebar' => 'bg-navy sidebar-dark-light elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
-    'classes_topnav_nav' => 'navbar-expand',
+    'classes_topnav' => 'navbar-light',
+    'classes_topnav_nav' => 'navbar-expand text-info',
     'classes_topnav_container' => 'container',
 
     /*
@@ -212,10 +212,10 @@ return [
 
     'sidebar_mini' => 'lg',
     'sidebar_collapse' => false,
-    'sidebar_collapse_auto_size' => false,
-    'sidebar_collapse_remember' => false,
-    'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
+    'sidebar_collapse_auto_size' => true,
+    'sidebar_collapse_remember' => true,
+    'sidebar_collapse_remember_no_transition' => false,
+    'sidebar_scrollbar_theme' => 'os-theme-dark',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
@@ -294,7 +294,7 @@ return [
         'ÁREA PRINCIPAL',
         [
             'text' => 'Dashboard',
-            'url' => '/',
+            'route' => 'dashboard',
             'icon' => 'fas fa-fw fa-tachometer-alt mx-1',
         ],
         [
@@ -326,14 +326,14 @@ return [
                 [
                     'text' => 'Contas a Pagar',
                     'route' => 'conta-pagar',
-                    'classes' => 'mx-3 text-dark',
+                    'classes' => 'mx-1',
                     'icon' => 'fas fa-file-invoice-dollar mx-1',
 
                 ],
                 [
                     'text' => 'Relatório',
                     'url' => '/',
-                    'classes' => 'mx-3 text-dark',
+                    'classes' => 'mx-1',
                     'icon' => 'fas fa-poll-h mx-1'
                 ],
             ]
