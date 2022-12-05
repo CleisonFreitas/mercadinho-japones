@@ -100,7 +100,7 @@
                             <div class="card-body">
                                 <div class="form-group row">
                                     <div class="col-12 col-md-12 col-lg-12">
-                                        <canvas id="myChart" style="position: relative; height:40vh; width:80vw"></canvas>
+                                        <canvas id="myChart" style="position: relative; height:30vh; width:80vw"></canvas>
                                     </div>
                                 </div>
 
@@ -108,6 +108,16 @@
                         </div>
                     </div>
 
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12 col-sm-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="SecondChart" style="position: relative; height:30vh;"></canvas>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
